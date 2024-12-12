@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 Hallo
 Abdil
+=======
+<<<<<<< HEAD
+Abdil
+=======
+Hallo
+>>>>>>> 2c69ec3 (initial commit)
+>>>>>>> save-commit-branch
