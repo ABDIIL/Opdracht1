@@ -1,0 +1,31 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "SowtwareSecLabo8 ",
+    "owner": "Abdil",
+    "description": "nope",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Man1"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [],
+        "description": "Diagram"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Man1",
+    "threatTop": 0
+  }
+}
