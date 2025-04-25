@@ -28,8 +28,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "3dd708aa-275c-4085-9eb7-596906e985e6",
             "zIndex": -1,
+            "id": "3dd708aa-275c-4085-9eb7-596906e985e6",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -49,8 +49,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "6f6505ef-3ee6-49a7-8e97-cbb394b74779",
             "zIndex": -1,
+            "id": "6f6505ef-3ee6-49a7-8e97-cbb394b74779",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -61,8 +61,8 @@
           },
           {
             "position": {
-              "x": 510,
-              "y": 10
+              "x": 506.25,
+              "y": 10.000000000000085
             },
             "size": {
               "width": 112.5,
@@ -80,6 +80,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -163,7 +164,6 @@
               ]
             },
             "id": "38da94c2-59e0-4610-b169-4625da73d2f6",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Gebruiker1",
@@ -189,13 +189,14 @@
                 "text": "Connecteer public wifi"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -279,19 +280,66 @@
               ]
             },
             "id": "7b596833-5ad9-467e-a760-83d41de2b99a",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Connecteer public wifi",
               "description": "Dit proces connecteerd tot het wifi netwerk. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "04fa67f2-60ac-4e36-9e06-df61703293a2",
+                  "title": "S1: Rogue Evil-Twin Hotspot",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Aanvaller bootst wifi na. ",
+                  "mitigation": "Always-On VPN: afdwingen via beleid, zodat zelfs bij verbinding met een rogue-netwerk al het verkeer versleuteld blijft.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "786ba0fc-a69e-436f-8498-8dc7e5d17551",
+                  "title": "Ontbrekende logs op publieke Wi-Fi-providers",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Publieke Wi-Fi-operators loggen vaak kortdurend of helemaal niet wie welk apparaat verbindt, waardoor na een incident geen attributie mogelijk is en medewerkers onterecht onschuldig kunnen lijken.",
+                  "mitigation": "Centrale logging via de corporate VPN-gateway (SIEM) om alle sessies en dataflows vast te leggen.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "624fbe08-27f9-4b1f-8e92-1f5484b35f9b",
+                  "title": "KRACK-aanval op verouderde WPA2-implementaties",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "De KRACK-sleutelreinstallatie-zwakte in de WPA2-handshake laat een MITM-aanvaller nonce-resets forceren, waarna hij data kan ontcijferen en manipuleren met systeemrechten.",
+                  "mitigation": "WPA3-upgrade waar mogelijk om KRACK-klassen te voorkomen. \nControle van handshake-configuraties en disable EAPOL-retransmissions op AP’s als workaround.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -308,13 +356,14 @@
                 "text": "VPN opstellen"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -398,25 +447,46 @@
               ]
             },
             "id": "c260338b-068f-40a8-b48d-b0b95f4deb6b",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "VPN opstellen",
               "description": "Opstellen en activeren van een VPN",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ee321b23-6a27-4366-b3b6-29aa1a0d4598",
+                  "title": "Replay attack op VPN-sessietokens",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Aanvallers onderscheppen en hertransmissie van geldige VPN-sessietokens om zich voor te doen als legitieme gebruikers en toegang te krijgen tot het corporate netwerk.",
+                  "mitigation": "Verplicht altijd-aan-VPN met certificaat-gebaseerde authenticatie",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
             "position": {
               "x": 1007,
-              "y": 90
+              "y": 95.00000000000009
             },
             "size": {
               "width": 60,
@@ -427,13 +497,14 @@
                 "text": "Gebruik office 365"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -517,19 +588,66 @@
               ]
             },
             "id": "a3ff14c4-2d58-4a85-904e-a2eb138bf881",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Gebruik office 365",
               "description": "Het gebruiken van de Office 365",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "7ed1cd3e-34d7-484f-b144-550470351237",
+                  "title": " Malware-injectie in Office 365-collaboratiedocumenten",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Mogelijkheid om een add-in malware te injecteren in een Office-document dat zich verspreid naar verschillende gebruikers die samenwerken. ",
+                  "mitigation": "Microsoft Defender for Office 365 inschakelen om macro’s en bijlagen real-time te scannen en kwaadaardige links te blokkeren. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "fdb9d380-98c3-4b5b-be3a-18b99e1d238b",
+                  "title": "Brute-force account lockout op Office 365",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Aanvallers voeren geautomatiseerde wachtwoordpogingen uit via legacy-protocollen (POP/IMAP) of directe login-PoC’s, wat resulteert in massale account locks en verlies van toegang tot collaboratiediensten. ",
+                  "mitigation": "Schakel legacy-authenticatie (POP/IMAP/SMTP) uit in Exchange Online",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5"
+                },
+                {
+                  "id": "b04fd0ba-d94c-4b8a-acb6-b620fcf92bb2",
+                  "title": "Privilege escalation via e-mailclaim-misconfiguratie in Azure AD",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Een aanvaller misbruikt het gebruik van ongeverifieerde e-mailclaims in een multi-tenant applicatie om tokens te genereren die toegang geven tot admin-privileges binnen Office 365.",
+                  "mitigation": " Gebruik nooit de email-claim voor autorisatie, slechts voor display; valideer e-mailadressen via verified domains\nReview en fix misconfigured app-settings in multi-tenant apps ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 3
+              }
             }
           },
           {
@@ -553,6 +671,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -636,7 +755,6 @@
               ]
             },
             "id": "d33448a3-1466-4ffa-be6f-58bd3ca74a8d",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Bellen",
@@ -665,16 +783,19 @@
                 "text": "Back-end"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -758,27 +879,47 @@
               ]
             },
             "id": "1c8f8498-9256-44d6-a9ca-f466bdbcafd7",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "Back-end",
               "description": "Dit is de back-end service",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "9f6074d6-73c5-4ee0-a5d5-034b5ba640d0",
+                  "title": "Verwijderen van audit logs in Office 365",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": " Een medewerker of aanvaller met admin-rechten verwijdert audit logs in het Microsoft 365 Compliance Center, waardoor onveilige handelingen ontkend kunnen worden.",
+                  "mitigation": "Configureer alerting op logging-wijzigingen in het Microsoft 365 Compliance Center \nZet tamper-evident opslag in (immutable storage) voor kritieke logs",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -798,12 +939,44 @@
               "description": "Verbinden aan wifi netwerk.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "af229681-fa09-4b3f-aed6-4e27530ae7be",
+                  "title": "Wi-Fi Jamming",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Een aanvaller kan met een jammer of via reconfigurable intelligent surfaces (RIS) het Wi-Fi-kanaal overbelasten, waardoor medewerkers geen verbinding met de hotspot of VPN meer kunnen maken.",
+                  "mitigation": "Policy-gebaseerde failover naar mobiel datanetwerk (4G/5G) instellen bij uitval van Wi-Fi. \nDual-homed devices: bekabelde fallback voor kritische endpoints in stations of lounges.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "499e65bb-fd42-4ee5-9cfe-19bff75f6b2a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Verbind wifi netwerk"
@@ -882,57 +1055,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "API Request",
-              "description": "Gebruik maken van een API",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "API Request"
-            ],
-            "id": "c657fff9-8e3f-4e41-b5b2-6c6cb919983a",
-            "source": {
-              "cell": "1c8f8498-9256-44d6-a9ca-f466bdbcafd7",
-              "port": "8111cc03-34c1-4755-8855-e7b88288a43f"
-            },
-            "target": {
-              "cell": "c260338b-068f-40a8-b48d-b0b95f4deb6b",
-              "port": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
-            },
-            "vertices": [
-              {
-                "x": 290,
-                "y": 370
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -952,12 +1076,31 @@
               "description": "Software voor documentatie te regelen. ",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "318cecb8-a9dd-49c5-b344-6a3c1038479a",
+                  "title": "Man-in-the-Cloud attack op Office 365 document sync",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Een “Man-in-the-Cloud” aanvaller steelt een synchronisatietoken voor OneDrive/SharePoint om malware of ongewenste wijzigingen in gedeelde documenten door te voeren.",
+                  "mitigation": "Continuous monitoring en alerting op afwijkende OneDrive-sync-patronen",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Documenten gebruiken"
@@ -986,7 +1129,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1006,12 +1150,31 @@
               "description": "Een SRTP-stream is een beveiligde audiostream die spraakgegevens versleutelt en beschermt.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "11e273dd-1b56-46b9-bf3c-dca28b36d94d",
+                  "title": "Eavesdropping op misconfiguraties in SRTP-stream",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Description: Als een VoIP-applicatie per ongeluk terugvalt op onvercijferde RTP of een zwakke cipher-modus gebruikt, kunnen aanvallers met packet sniffers gesprekken aftappen.",
+                  "mitigation": "Forceer SRTP met AES-GCM en disable null-encryption cipher-modus conform RFC 3711. \nDTLS-SRTP (of ZRTP) inzetten voor veilige key-exchange en sterke authenticatie.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "SRTP-stream"
@@ -1031,8 +1194,86 @@
                 "y": 150
               },
               {
+                "x": 790,
+                "y": 170
+              },
+              {
                 "x": 850,
                 "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API Request",
+              "description": "Gebruik maken van een API",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "f51ad83e-05c4-4dea-be0c-6d31522369fb",
+                  "title": "API-metadata lek in Office 365",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Ongeautoriseerde blootstelling van e-mail- en bestandsmetadata via slecht beveiligde API-requests, waardoor gevoelige informatie (bijv. interne routing of bestandsnamen) kan uitlekken.",
+                  "mitigation": "Beperk API-scopes tot least-privilege via Azure AD app-registraties",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "API Request"
+            ],
+            "id": "c657fff9-8e3f-4e41-b5b2-6c6cb919983a",
+            "source": {
+              "cell": "1c8f8498-9256-44d6-a9ca-f466bdbcafd7",
+              "port": "8111cc03-34c1-4755-8855-e7b88288a43f"
+            },
+            "target": {
+              "cell": "c260338b-068f-40a8-b48d-b0b95f4deb6b",
+              "port": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 370
+              },
+              {
+                "x": 290,
+                "y": 370
               }
             ]
           }
@@ -1042,6 +1283,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Man1",
-    "threatTop": 0
+    "threatTop": 14
   }
 }
