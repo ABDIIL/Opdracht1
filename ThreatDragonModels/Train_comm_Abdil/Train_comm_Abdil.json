@@ -177,8 +177,8 @@
           },
           {
             "position": {
-              "x": 40,
-              "y": 90
+              "x": 35.99999999999993,
+              "y": 95.00000000000009
             },
             "size": {
               "width": 60,
@@ -293,49 +293,49 @@
               "privilegeLevel": "",
               "threats": [
                 {
-                  "id": "04fa67f2-60ac-4e36-9e06-df61703293a2",
-                  "title": "S1: Rogue Evil-Twin Hotspot",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Aanvaller bootst wifi na. ",
-                  "mitigation": "Always-On VPN: afdwingen via beleid, zodat zelfs bij verbinding met een rogue-netwerk al het verkeer versleuteld blijft.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 1,
-                  "score": ""
-                },
-                {
                   "id": "786ba0fc-a69e-436f-8498-8dc7e5d17551",
                   "title": "Ontbrekende logs op publieke Wi-Fi-providers",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Repudiation",
                   "description": "Publieke Wi-Fi-operators loggen vaak kortdurend of helemaal niet wie welk apparaat verbindt, waardoor na een incident geen attributie mogelijk is en medewerkers onterecht onschuldig kunnen lijken.",
                   "mitigation": "Centrale logging via de corporate VPN-gateway (SIEM) om alle sessies en dataflows vast te leggen.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
-                  "score": ""
+                  "score": "7"
                 },
                 {
-                  "id": "624fbe08-27f9-4b1f-8e92-1f5484b35f9b",
-                  "title": "KRACK-aanval op verouderde WPA2-implementaties",
+                  "id": "7f44abc7-9cfa-4492-8dee-a60625ab0721",
+                  "title": "Evil Twin Wi-Fi Hotspot",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Elevation of privilege",
-                  "description": "De KRACK-sleutelreinstallatie-zwakte in de WPA2-handshake laat een MITM-aanvaller nonce-resets forceren, waarna hij data kan ontcijferen en manipuleren met systeemrechten.",
-                  "mitigation": "WPA3-upgrade waar mogelijk om KRACK-klassen te voorkomen. \nControle van handshake-configuraties en disable EAPOL-retransmissions op AP’s als workaround.",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Een aanvaller zet een valse Wi-Fi-hotspot op die de SSID van de trein-provider nabootst, waardoor medewerkers onbewust verbinden en al hun netwerkverkeer via de kwaadwillende AP loopt. \n",
+                  "mitigation": "Always-On VPN afdwingen via MDM (NordLayer’s Always-On VPN garandeert dat al het verkeer via de tunnel verloopt)\nAuto-connect uitschakelen en personeel trainen om verdachte netwerken te herkennen",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 6,
-                  "score": ""
+                  "number": 15,
+                  "score": "7.5"
+                },
+                {
+                  "id": "528b9d7f-4a3e-4831-920e-3cdd72f349bd",
+                  "title": "KRACK-aanval op verouderde WPA2",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "De KRACK-sleutelreinstallatie-zwakte in de WPA2-handshake laat een MITM-aanvaller nonce-resets forceren, waarna hij data kan ontcijferen en manipuleren met systeemrechten. \n\n ",
+                  "mitigation": "Upgrade naar WPA3 waar mogelijk om nonce-reset-kwetsbaarheden te elimineren \nAP-configuratie: disable EAPOL-retransmissions als noodoplossing",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 1,
                 "tampering": 0,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 1
@@ -486,7 +486,7 @@
           {
             "position": {
               "x": 1007,
-              "y": 95.00000000000009
+              "y": 105.00000000000009
             },
             "size": {
               "width": 60,
@@ -601,19 +601,6 @@
               "privilegeLevel": "",
               "threats": [
                 {
-                  "id": "7ed1cd3e-34d7-484f-b144-550470351237",
-                  "title": " Malware-injectie in Office 365-collaboratiedocumenten",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Mogelijkheid om een add-in malware te injecteren in een Office-document dat zich verspreid naar verschillende gebruikers die samenwerken. ",
-                  "mitigation": "Microsoft Defender for Office 365 inschakelen om macro’s en bijlagen real-time te scannen en kwaadaardige links te blokkeren. ",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                },
-                {
                   "id": "fdb9d380-98c3-4b5b-be3a-18b99e1d238b",
                   "title": "Brute-force account lockout op Office 365",
                   "status": "Open",
@@ -642,7 +629,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 2,
@@ -904,11 +891,24 @@
                   "new": false,
                   "number": 11,
                   "score": "6"
+                },
+                {
+                  "id": "3ff4c998-83bd-4551-b2b9-a9a02fa60dfb",
+                  "title": "Ontbrekende logs op publieke Wi-Fi-providers",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "",
+                  "mitigation": " EDR-agents op endpoints voor uitgebreid lokaal loggen en forensische data-verzameling\n Retentiebeleid (minimaal 90 dagen) instellen in je log-opslag om forensisch onderzoek mogelijk te maken",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "5.5"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 2,
+                "repudiation": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -949,33 +949,20 @@
                   "id": "af229681-fa09-4b3f-aed6-4e27530ae7be",
                   "title": "Wi-Fi Jamming",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Een aanvaller kan met een jammer of via reconfigurable intelligent surfaces (RIS) het Wi-Fi-kanaal overbelasten, waardoor medewerkers geen verbinding met de hotspot of VPN meer kunnen maken.",
                   "mitigation": "Policy-gebaseerde failover naar mobiel datanetwerk (4G/5G) instellen bij uitval van Wi-Fi. \nDual-homed devices: bekabelde fallback voor kritische endpoints in stations of lounges.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
-                  "score": ""
-                },
-                {
-                  "id": "499e65bb-fd42-4ee5-9cfe-19bff75f6b2a",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 7,
-                  "score": ""
+                  "score": "6"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1
+                "denialOfService": 2
               }
             },
             "labels": [
@@ -1094,10 +1081,23 @@
                   "new": false,
                   "number": 10,
                   "score": "8"
+                },
+                {
+                  "id": "4a5c80e4-53df-49f0-9e04-1587580b1901",
+                  "title": "\tMalware-injectie in Office 365-collaboratiedocumenten",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Mogelijkheid om een add-in malware te injecteren in een Office-document dat zich verspreid naar verschillende gebruikers die samenwerken. ",
+                  "mitigation": "AMSI-integratie voor runtime-scanning van macros (zoals XLM-AMSI voor Excel)\nMicrosoft Defender for Office 365 inschakelen voor real-time scanning van macro’s en bijlagen",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
+                "tampering": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -1122,84 +1122,6 @@
               {
                 "x": 790,
                 "y": 120
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "SRTP-stream",
-              "description": "Een SRTP-stream is een beveiligde audiostream die spraakgegevens versleutelt en beschermt.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "11e273dd-1b56-46b9-bf3c-dca28b36d94d",
-                  "title": "Eavesdropping op misconfiguraties in SRTP-stream",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Description: Als een VoIP-applicatie per ongeluk terugvalt op onvercijferde RTP of een zwakke cipher-modus gebruikt, kunnen aanvallers met packet sniffers gesprekken aftappen.",
-                  "mitigation": "Forceer SRTP met AES-GCM en disable null-encryption cipher-modus conform RFC 3711. \nDTLS-SRTP (of ZRTP) inzetten voor veilige key-exchange en sterke authenticatie.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 4,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "SRTP-stream"
-            ],
-            "id": "2c92c48d-5ba8-4279-b83a-bd035abec1bf",
-            "source": {
-              "cell": "38da94c2-59e0-4610-b169-4625da73d2f6",
-              "port": "91a372bd-8045-4ce5-94cf-6c81c11cd645"
-            },
-            "target": {
-              "cell": "d33448a3-1466-4ffa-be6f-58bd3ca74a8d",
-              "port": "42c56e68-e843-4129-9904-457fe6b4c817"
-            },
-            "vertices": [
-              {
-                "x": 610,
-                "y": 150
-              },
-              {
-                "x": 790,
-                "y": 170
-              },
-              {
-                "x": 850,
-                "y": 190
               }
             ]
           },
@@ -1274,6 +1196,88 @@
               {
                 "x": 290,
                 "y": 370
+              },
+              {
+                "x": 210,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SRTP-stream",
+              "description": "een realtime audiostream die via AES-encryptie en HMAC-authenticatie wordt beschermd tegen afluisteren en replay-aanvallen",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2daa534a-5648-4d6c-a5d3-5b6ecc7bfa57",
+                  "title": "Eavesdropping op misconfiguraties in SRTP-stream",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": " Forceer SRTP met AES-GCM en schakel null-encryption cipher-modi uit (RFC 3711) \nDTLS-SRTP inzetten voor veilige sleuteluitwisseling en sterke authenticatie \nRegelmatige configuratie-audits van VoIP-settings en netwerklogs",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "SRTP-stream"
+            ],
+            "id": "22ede618-3220-498d-912a-c553743656d4",
+            "source": {
+              "cell": "38da94c2-59e0-4610-b169-4625da73d2f6",
+              "port": "91a372bd-8045-4ce5-94cf-6c81c11cd645"
+            },
+            "target": {
+              "cell": "d33448a3-1466-4ffa-be6f-58bd3ca74a8d",
+              "port": "42c56e68-e843-4129-9904-457fe6b4c817"
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 220
+              },
+              {
+                "x": 760,
+                "y": 200
+              },
+              {
+                "x": 810,
+                "y": 180
               }
             ]
           }
@@ -1283,6 +1287,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Man1",
-    "threatTop": 14
+    "threatTop": 20
   }
 }
