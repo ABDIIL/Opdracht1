@@ -16,7 +16,1027 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.4.1",
-        "cells": [],
+        "cells": [
+          {
+            "position": {
+              "x": -14.000000000000071,
+              "y": 70.00000000000009
+            },
+            "size": {
+              "width": 160,
+              "height": 110
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "3dd708aa-275c-4085-9eb7-596906e985e6",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 3.999999999999986,
+              "y": 234
+            },
+            "size": {
+              "width": 130,
+              "height": 90
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "6f6505ef-3ee6-49a7-8e97-cbb394b74779",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 510,
+              "y": 10
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Gebruiker1"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "f73cbd95-3418-4c0c-9f4e-754fbffa322c"
+                },
+                {
+                  "group": "right",
+                  "id": "d9b42cdc-5a7f-409a-a3b0-fc59ed685031"
+                },
+                {
+                  "group": "bottom",
+                  "id": "91a372bd-8045-4ce5-94cf-6c81c11cd645"
+                },
+                {
+                  "group": "left",
+                  "id": "3584ecbb-16d0-4f3b-b93a-f4f58a0067c8"
+                }
+              ]
+            },
+            "id": "38da94c2-59e0-4610-b169-4625da73d2f6",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Gebruiker1",
+              "description": "Gebruiker 1. Stelt een persoon voor.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 40,
+              "y": 90
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Connecteer public wifi"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "efbe227b-94ab-4cf3-a153-bdd7d1e5a550"
+                },
+                {
+                  "group": "right",
+                  "id": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+                },
+                {
+                  "group": "bottom",
+                  "id": "04507eaf-949b-4fea-b7aa-9b5e6bda71ed"
+                },
+                {
+                  "group": "left",
+                  "id": "42c56e68-e843-4129-9904-457fe6b4c817"
+                }
+              ]
+            },
+            "id": "7b596833-5ad9-467e-a760-83d41de2b99a",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "Connecteer public wifi",
+              "description": "Dit proces connecteerd tot het wifi netwerk. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 40,
+              "y": 250
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "VPN opstellen"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "efbe227b-94ab-4cf3-a153-bdd7d1e5a550"
+                },
+                {
+                  "group": "right",
+                  "id": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+                },
+                {
+                  "group": "bottom",
+                  "id": "04507eaf-949b-4fea-b7aa-9b5e6bda71ed"
+                },
+                {
+                  "group": "left",
+                  "id": "42c56e68-e843-4129-9904-457fe6b4c817"
+                }
+              ]
+            },
+            "id": "c260338b-068f-40a8-b48d-b0b95f4deb6b",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Process",
+              "name": "VPN opstellen",
+              "description": "Opstellen en activeren van een VPN",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1007,
+              "y": 90
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Gebruik office 365"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "efbe227b-94ab-4cf3-a153-bdd7d1e5a550"
+                },
+                {
+                  "group": "right",
+                  "id": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+                },
+                {
+                  "group": "bottom",
+                  "id": "04507eaf-949b-4fea-b7aa-9b5e6bda71ed"
+                },
+                {
+                  "group": "left",
+                  "id": "42c56e68-e843-4129-9904-457fe6b4c817"
+                }
+              ]
+            },
+            "id": "a3ff14c4-2d58-4a85-904e-a2eb138bf881",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Process",
+              "name": "Gebruik office 365",
+              "description": "Het gebruiken van de Office 365",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1007,
+              "y": 250
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Bellen"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "efbe227b-94ab-4cf3-a153-bdd7d1e5a550"
+                },
+                {
+                  "group": "right",
+                  "id": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+                },
+                {
+                  "group": "bottom",
+                  "id": "04507eaf-949b-4fea-b7aa-9b5e6bda71ed"
+                },
+                {
+                  "group": "left",
+                  "id": "42c56e68-e843-4129-9904-457fe6b4c817"
+                }
+              ]
+            },
+            "id": "d33448a3-1466-4ffa-be6f-58bd3ca74a8d",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Process",
+              "name": "Bellen",
+              "description": "Het bellen van andere gebruikers. Een vorm van communicatie",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 506.25,
+              "y": 270
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Back-end"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "c6a3341f-ea8e-4a1f-b7af-3b7fbb99e002"
+                },
+                {
+                  "group": "right",
+                  "id": "2b6992c8-d87b-4c00-a5e0-bfbab61f06b1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f1e6d787-03dd-4754-b171-5c28cce7b2f5"
+                },
+                {
+                  "group": "left",
+                  "id": "8111cc03-34c1-4755-8855-e7b88288a43f"
+                }
+              ]
+            },
+            "id": "1c8f8498-9256-44d6-a9ca-f466bdbcafd7",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Store",
+              "name": "Back-end",
+              "description": "Dit is de back-end service",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verbind wifi netwerk",
+              "description": "Verbinden aan wifi netwerk.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Verbind wifi netwerk"
+            ],
+            "id": "a33b7f77-2a3c-4b42-88bf-c8f52bbbe2ca",
+            "source": {
+              "cell": "38da94c2-59e0-4610-b169-4625da73d2f6",
+              "port": "3584ecbb-16d0-4f3b-b93a-f4f58a0067c8"
+            },
+            "target": {
+              "cell": "7b596833-5ad9-467e-a760-83d41de2b99a",
+              "port": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 60
+              },
+              {
+                "x": 280,
+                "y": 120
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "TLS Tunnel",
+              "description": "Een TLS-tunnel is een versleutelde verbinding die veilig gegevens transporteert via het internet.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "TLS Tunnel"
+            ],
+            "id": "62de836d-040c-4e67-960a-7f4f8fa0fe97",
+            "source": {
+              "cell": "c260338b-068f-40a8-b48d-b0b95f4deb6b",
+              "port": "efbe227b-94ab-4cf3-a153-bdd7d1e5a550"
+            },
+            "target": {
+              "cell": "7b596833-5ad9-467e-a760-83d41de2b99a",
+              "port": "04507eaf-949b-4fea-b7aa-9b5e6bda71ed"
+            },
+            "vertices": [
+              {
+                "x": 170,
+                "y": 210
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API Request",
+              "description": "Gebruik maken van een API",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "API Request"
+            ],
+            "id": "c657fff9-8e3f-4e41-b5b2-6c6cb919983a",
+            "source": {
+              "cell": "1c8f8498-9256-44d6-a9ca-f466bdbcafd7",
+              "port": "8111cc03-34c1-4755-8855-e7b88288a43f"
+            },
+            "target": {
+              "cell": "c260338b-068f-40a8-b48d-b0b95f4deb6b",
+              "port": "5238332f-f5c8-40c8-9d39-53f8bbfac7ae"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 370
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Documenten gebruiken",
+              "description": "Software voor documentatie te regelen. ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Documenten gebruiken"
+            ],
+            "id": "e58aeb70-76b3-4c91-b9b8-83544d9f44ee",
+            "source": {
+              "cell": "38da94c2-59e0-4610-b169-4625da73d2f6",
+              "port": "d9b42cdc-5a7f-409a-a3b0-fc59ed685031"
+            },
+            "target": {
+              "cell": "a3ff14c4-2d58-4a85-904e-a2eb138bf881",
+              "port": "42c56e68-e843-4129-9904-457fe6b4c817"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 60
+              },
+              {
+                "x": 790,
+                "y": 120
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SRTP-stream",
+              "description": "Een SRTP-stream is een beveiligde audiostream die spraakgegevens versleutelt en beschermt.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "SRTP-stream"
+            ],
+            "id": "2c92c48d-5ba8-4279-b83a-bd035abec1bf",
+            "source": {
+              "cell": "38da94c2-59e0-4610-b169-4625da73d2f6",
+              "port": "91a372bd-8045-4ce5-94cf-6c81c11cd645"
+            },
+            "target": {
+              "cell": "d33448a3-1466-4ffa-be6f-58bd3ca74a8d",
+              "port": "42c56e68-e843-4129-9904-457fe6b4c817"
+            },
+            "vertices": [
+              {
+                "x": 610,
+                "y": 150
+              },
+              {
+                "x": 850,
+                "y": 190
+              }
+            ]
+          }
+        ],
         "description": "Labo8"
       }
     ],
