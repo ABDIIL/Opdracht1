@@ -1,0 +1,27 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Train_comm_Abdil",
+    "owner": "Abdil",
+    "description": "Medewerkers werken via publieke Wi-Fi en corporate VPN in de trein, inclusief Office 365-collaboratie en calls.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [],
+        "description": "Labo8"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Man1",
+    "threatTop": 0
+  }
+}
